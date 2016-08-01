@@ -34,6 +34,16 @@ return [
                     ],
                 ],
             ],
+            'example' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/example',
+                    'defaults' => [
+                        'controller'    => Controller\IndexController::class,
+                        'action'        => 'example',
+                    ],
+                ],
+            ],
         ],
     ],
     'controllers' => [

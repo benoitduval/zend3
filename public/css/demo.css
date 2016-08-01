@@ -127,7 +127,6 @@
 .logo-container .logo{
     overflow: hidden;
     border-radius: 50%;
-    border: 1px solid #333333;
     width: 50px;
     float: left;
 }
@@ -138,8 +137,8 @@
     line-height: 18px;
     float: left;
     margin-left: 10px;
-    margin-top: 7px;
-    width: 70px;
+    margin-top: 16px;
+    width: 100px;
     height: 40px;
     text-align: left;
 }
@@ -403,4 +402,24 @@
 .components-page .title,
 .tutorial-page .title{
     color: #FFFFFF;
+}
+
+.agenda-header {
+    background-color:#D32F2F;
+    border-radius:3px 3px 0 0;
+    color:#FFF;
+    padding:3px 0 3px;
+}
+
+.agenda-content .day {
+    font-size:3em;
+    font-weight:500;
+}
+
+.text-information i {
+    color:#c0c1c2;
+}
+
+.text-information span {
+    padding-left:15px;
 }
