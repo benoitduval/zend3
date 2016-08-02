@@ -30,9 +30,122 @@
                         <h2>Vos Évènements</h2>
                     </div>
                 </div>
-                    <?php for ($i = 0; $i < 6; $i++) { ?>
-                    <div class="col-md-6">
-
+                <div class="col-md-12">
+                    <!-- Tabs with icons on Card -->
+                    <div class="card card-nav-tabs">
+                        <div class="header header-primary">
+                            <div class="nav-tabs-navigation">
+                                <div class="nav-tabs-wrapper">
+                                    <ul class="nav nav-tabs" data-tabs="tabs">
+                                        <li class="active">
+                                            <a href="#profile-<?php echo $i.$j ?>" data-toggle="tab">
+                                                <i class="material-icons">date_range</i>
+                                                <span class="hidden-xs">Informations</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#address-<?php echo $i.$j ?>" data-toggle="tab">
+                                                <i class="material-icons">thumbs_up_down</i>
+                                                <span class="hidden-xs">Disponibilités</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#dispo-<?php echo $i.$j ?>" data-toggle="tab">
+                                                <i class="material-icons">thumbs_up_down</i>
+                                                <span class="hidden-xs">Disponibilités</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="tab-content text-center">
+                                <div class="tab-pane active" id="profile-<?php echo $i.$j ?>">
+                                    <div class="col-md-3 agenda">
+                                        <div class="card">
+                                            <div class="agenda-header">
+                                                <b>Novembre</b>
+                                            </div>
+                                            <div class="agenda-content">
+                                                <p>Jeudi</p>
+                                                <p class="day">25<p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 col-md-offset-1 text-left text-information">
+                                        <div class="col-xs-12">
+                                            <div class="col-md-1">
+                                                <i class="material-icons">account_balance</i>
+                                            </div>
+                                            <div class="col-md-10">
+                                                Dunois REM
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <div class="col-md-1">
+                                                <i class="material-icons">location_on</i>
+                                            </div>
+                                            <div class="col-md-10">
+                                                Entrainement Mardi
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="col-md-1">
+                                                <i class="material-icons">access_time</i>
+                                            </div>
+                                            <div class="col-md-10">
+                                                Rdv : 20h00
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-round lime">Détails</button>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="address-<?php echo $i.$j ?>">
+                                    <div class="col-xs-12">
+                                        <div class="col-md-1">
+                                            <i class="material-icons">account_balance</i>
+                                        </div>
+                                        <div class="col-md-10">
+                                            Gymnase Maurice Bacquet
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="col-md-1">
+                                            <i class="material-icons">location_on</i>
+                                        </div>
+                                        <div class="col-md-10">
+                                            129 ter rue du chemin vert<br/>
+                                            75011 Paris
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="dispo-<?php echo $i.$j ?>">
+                                    <div class="col-xs-12">
+                                        <div class="col-md-1">
+                                            <i class="material-icons">account_balance</i>
+                                        </div>
+                                        <div class="col-md-10">
+                                            Gymnase Maurice Bacquet
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="col-md-1">
+                                            <i class="material-icons">location_on</i>
+                                        </div>
+                                        <div class="col-md-10">
+                                            129 ter rue du chemin vert<br/>
+                                            75011 Paris
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php for ($i = 0; $i < 2; $i++) { ?>
+                <div class="col-md-6">
+                    <?php for ($j = 0; $j < 3; $j++) { ?>
                         <!-- Tabs with icons on Card -->
                         <div class="card card-nav-tabs">
                             <div class="header header-primary">
@@ -40,13 +153,19 @@
                                     <div class="nav-tabs-wrapper">
                                         <ul class="nav nav-tabs" data-tabs="tabs">
                                             <li class="active">
-                                                <a href="#profile-<?php echo $i ?>" data-toggle="tab">
+                                                <a href="#profile-<?php echo $i.$j ?>" data-toggle="tab">
                                                     <i class="material-icons">date_range</i>
                                                     <span class="hidden-xs">Informations</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#settings-<?php echo $i ?>" data-toggle="tab">
+                                                <a href="#address-<?php echo $i.$j ?>" data-toggle="tab">
+                                                    <i class="material-icons">thumbs_up_down</i>
+                                                    <span class="hidden-xs">Disponibilités</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#dispo-<?php echo $i.$j ?>" data-toggle="tab">
                                                     <i class="material-icons">thumbs_up_down</i>
                                                     <span class="hidden-xs">Disponibilités</span>
                                                 </a>
@@ -57,7 +176,7 @@
                             </div>
                             <div class="content">
                                 <div class="tab-content text-center">
-                                    <div class="tab-pane active" id="profile-<?php echo $i ?>">
+                                    <div class="tab-pane active" id="profile-<?php echo $i.$j ?>">
                                         <div class="col-md-3 agenda">
                                             <div class="card">
                                                 <div class="agenda-header">
@@ -70,20 +189,12 @@
                                             </div>
                                         </div>
                                         <div class="col-md-8 col-md-offset-1 text-left text-information">
-                                            <div class="col-md-12">
-                                                <div class="col-md-1">
-                                                    <i class="material-icons">access_time</i>
-                                                </div>
-                                                <div class="col-md-10">
-                                                    Gymnase Maurice Bacquet
-                                                </div>
-                                            </div>
                                             <div class="col-xs-12">
                                                 <div class="col-md-1">
                                                     <i class="material-icons">account_balance</i>
                                                 </div>
                                                 <div class="col-md-10">
-                                                    Gymnase Maurice Bacquet
+                                                    Dunois REM
                                                 </div>
                                             </div>
                                             <div class="col-xs-12">
@@ -91,23 +202,65 @@
                                                     <i class="material-icons">location_on</i>
                                                 </div>
                                                 <div class="col-md-10">
-                                                    129 ter rue du chemin vert<br/>
-                                                    75011 Paris
+                                                    Entrainement Mardi
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="col-md-1">
+                                                    <i class="material-icons">access_time</i>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    Rdv : 20h00
                                                 </div>
                                             </div>
                                             <button class="btn btn-round lime">Détails</button>
                                         </div>
                                     </div>
-                                    <div class="tab-pane" id="settings-<?php echo $i ?>">
-                                        <p>I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.</p>
+                                    <div class="tab-pane" id="address-<?php echo $i.$j ?>">
+                                        <div class="col-xs-12">
+                                            <div class="col-md-1">
+                                                <i class="material-icons">account_balance</i>
+                                            </div>
+                                            <div class="col-md-10">
+                                                Gymnase Maurice Bacquet
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <div class="col-md-1">
+                                                <i class="material-icons">location_on</i>
+                                            </div>
+                                            <div class="col-md-10">
+                                                129 ter rue du chemin vert<br/>
+                                                75011 Paris
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="dispo-<?php echo $i.$j ?>">
+                                        <div class="col-xs-12">
+                                            <div class="col-md-1">
+                                                <i class="material-icons">account_balance</i>
+                                            </div>
+                                            <div class="col-md-10">
+                                                Gymnase Maurice Bacquet
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <div class="col-md-1">
+                                                <i class="material-icons">location_on</i>
+                                            </div>
+                                            <div class="col-md-10">
+                                                129 ter rue du chemin vert<br/>
+                                                75011 Paris
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     <?php } ?>
-                    <!-- End Tabs with icons on Card -->
                 </div>
+                <?php } ?>
+                    <!-- End Tabs with icons on Card -->
             </div>
         </div>
     </div>
